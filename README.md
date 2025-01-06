@@ -1,7 +1,5 @@
 # samsung-riscv
 
-# VSDSquadron Mini Internship 2024
-
 ##  Basic Details
 
 **Name:** Rohith DR  
