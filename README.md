@@ -1,13 +1,5 @@
 # samsung-riscv
 
-##  Basic Details
-
-**Name:** Rohith DR  
-**College:** Global Academy of Technology  
-**Email ID:** rohith200317@gmail.com  
-**GitHub Profile:** [Rohith-DR](https://github.com/Rohith-DR?tab=repositories)  
-**LinkedIN Profile:** [Rohith-DR_ECE](https://www.linkedin.com/in/rohith-dr/)
-
 -------------------------------------------------
 
 <details>
