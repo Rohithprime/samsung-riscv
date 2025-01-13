@@ -72,3 +72,64 @@ We have to do the same compilation of our code but this time using RISCV gcc com
   <img width="800" height="500" src="/Task 1/Objdump using -Ofast format.png">
 </p>
 </details>
+
+
+-------------------------------------------------
+
+<details>
+<summary><b>Task 2:</b> Performing SPIKE Simulation and Debugging the C code with Interactive Debugging Mode using Spike</summary> 
+
+### What is SPIKE in RISCV?
+> * A RISC-V ISA is a simulator, enabling the testing and analysis of RISC-V programs without the need for actual hardware.  
+> * Spike is a free, open-source C++ simulator for the RISC-V ISA that models a RISC-V core and cache system. It can be used to run programs and a Linux kernel, and can be a starting point for running software on a RISC-V target.    
+  
+### What is pk (Proxy Kernel)?  
+> * The RISC-V Proxy Kernel, pk , is a lightweight application execution environment that can host statically-linked RISC-V ELF binaries.  
+> * A Proxy Kernel in the RISC-V ecosystem simplifies the interaction between complex hardware and the software running on it, making it easier to manage, test, and develop software and hardware projects.  
+
+### Testing the SPIKE Simulator  
+The target is to run the ```sum.c``` code using both ```gcc compiler``` and ```riscv compiler```, and both of the compiler must display the same output on the terminal. So to compile the code using **gcc compiler**, use the following command:  
+```
+gcc sum.c  
+./a.out
+```
+And to compile the code using **riscv compiler**, use the following command:  
+```
+spike pk sum.o
+```  
+#### Spike Simulation:
+ <p align="center">
+  <img width="800" height="500" src="/Task 2/Spike Simulation.png">
+</p>
+
+#### Following are the snapshots of RISCV Objdump with **-O1** and **-Ofast** options  
+  
+#### Objdump in -O1:
+ <p align="center">
+  <img width="800" height="500" src="/Task 2/Objdump in -O1.png">
+</p>
+  
+#### Objdump in -Ofast:
+ <p align="center">
+  <img width="800" height="500" src="/Task 2/Objdump in -Ofast.png">
+</p>
+
+
+#### Debugging the Assembly Language Program of  ```sum.c```  
+* Open the **Objdump** of code by using the following command  
+```
+riscv64-unknown-elf-objdump -d sum.o | less  
+```
+* Open the debugger in another terminal by using the following command  
+```
+spike -d pk sum.o
+```
+* The debugger will be opened in the terminal. Now, debugging operations can be performed as shown in the following snapshot.
+
+#### Debugging:
+ <p align="center">
+  <img width="800" height="500" src="/Task 2/Debugging.png">
+</p>
+</details>
+
+----------------------------------------
