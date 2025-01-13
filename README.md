@@ -105,11 +105,21 @@ spike pk sum.o
 #### Following are the snapshots of RISCV Objdump with **-O1** and **-Ofast** options  
   
 #### Objdump in -O1:
+
+```
+riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum.o sum.c
+```
+
  <p align="center">
   <img width="800" height="500" src="/Task 2/Objdump in -O1.png">
 </p>
   
 #### Objdump in -Ofast:
+
+```
+riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum.o sum.c
+```
+ 
  <p align="center">
   <img width="800" height="500" src="/Task 2/Objdump in -Ofast.png">
 </p>
