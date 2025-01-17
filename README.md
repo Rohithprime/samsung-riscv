@@ -1,9 +1,10 @@
-# samsung-riscv
+# Documentation for the Samsung RISC-V Workshop
 
+Welcome to the documentation for the Samsung Semiconductor RISC-V Workshop! Using the VSDSquadron Mini RISC-V development board, this session investigates the open-source RISC-V architecture. As a pioneer in technology, Samsung is dedicated to developing RISC-V technology and encouraging creativity via cooperation and education.
 -------------------------------------------------
 
 <details>
-<summary><b>Task 1:</b> Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler</summary>
+<summary><b>Task 1:</b> The assignment is to watch lab videos that are based on C and RISCV and then use the gcc and riscv compilers to compile the C code</summary>
 
 ### C Language based LAB
 We have to follow the given steps to compile any **.c** file in our machine:  
@@ -77,7 +78,7 @@ We have to do the same compilation of our code but this time using RISCV gcc com
 -------------------------------------------------
 
 <details>
-<summary><b>Task 2:</b> Performing SPIKE Simulation and Debugging the C code with Interactive Debugging Mode using Spike</summary> 
+<summary><b>Task 2:</b> Using Spike Simulation and Interactive Debugging Mode to Debugg the C code during Spike</summary> 
 
 ### What is SPIKE in RISCV?
 > * A RISC-V ISA is a simulator, enabling the testing and analysis of RISC-V programs without the need for actual hardware.  
