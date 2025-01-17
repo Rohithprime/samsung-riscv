@@ -247,6 +247,47 @@ J-type instructions are used for jump operations. These instructions are often u
 - **imm[20]** (1 bit), **imm[10:1]** (10 bits), **imm[11]** (1 bit), and **imm[19:12]** (8 bits): These bits form the 20-bit signed immediate for the jump address.
 - **rd** (5 bits): The destination register (used for return addresses).
 
+## Commands for Extracting RISC-V Instructions
+#### Compile the C program into a RISC-V ELF binary
+```
+riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -o sum sum.c
+```
+
+#### Generate a disassembly of the binary
+```
+riscv64-unknown-elf-objdump -d sum > sum.objdump
+```
+
+#### Display the main function's disassembly, with 30 lines of context
+```
+riscv64-unknown-elf-objdump -d sum | grep -A 30 "<main>:"
+```
+
+#### Filter for arithmetic and logical instructions: add, sub, and, or
+```
+riscv64-unknown-elf-objdump -d sum | grep -E "add|sub|and|or"
+```
+
+#### Filter for immediate arithmetic, load, and jump instructions: addi, lw, jalr
+```
+riscv64-unknown-elf-objdump -d sum | grep -E "addi|lw|jalr"
+```
+
+#### Filter for store and branch instructions: sw, beq, bne, blt, bge
+```
+riscv64-unknown-elf-objdump -d sum | grep -E "sw|beq|bne|blt|bge"
+```
+
+#### Filter for control flow and address instructions: lui, auipc, jal
+```
+riscv64-unknown-elf-objdump -d sum | grep -E "lui|auipc|jal"
+```
+
+#### Count occurrences of each unique instruction
+```
+riscv64-unknown-elf-objdump -d sum | grep -o "\s\w\+\s" | sort | uniq -c
+```
+
 # Example Application with its Instructions
 <details>
 <summary>Given below is the C code for sum of N numbers</summary>
