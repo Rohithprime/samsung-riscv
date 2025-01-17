@@ -1,6 +1,13 @@
 # Documentation for the Samsung RISC-V Workshop
 
 Welcome to the documentation for the Samsung Semiconductor RISC-V Workshop! Using the VSDSquadron Mini RISC-V development board, this session investigates the open-source RISC-V architecture. As a pioneer in technology, Samsung is dedicated to developing RISC-V technology and encouraging creativity via cooperation and education.
+
+ <p align="center">
+  <img width="400" height="250" src="/Task 1/VSD_sq/vsdsquadron mini.jpg">
+</p>
+
+The VSDsquadron Mini is a compact RISC-V development board designed for hobbyists, educators, and engineers. It features a powerful RISC-V microcontroller, offering a balance of performance and energy efficiency. Equipped with essential peripherals like GPIOs, UART, I2C, SPI, and ADC, it supports a wide range of applications, from IoT projects to embedded systems development. The board is USB-programmable, making it beginner-friendly, and is compatible with popular development tools and open-source resources. Its small form factor and versatility make it an ideal choice for learning RISC-V architecture and prototyping innovative designs.
+
 -------------------------------------------------
 
 <details>
