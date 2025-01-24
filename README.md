@@ -514,6 +514,143 @@ This document provides a detailed explanation of the given RISC-V assembly instr
 
 </details>
 
+------------------------------
+
+<details>
+<summary><b>Task 4:</b> Use RISCV Core: Verilog Netlist and Testbench to conduct a functional simulation experiment and view the waveforms</summary>  
+<br>
+
+>***NOTE:** Since this research internship does not include building the RISCV architecture or writing its testbench, we will utilize the pre-existing Verilog code and testbench. The GitHub repository used as a reference is : [iiitb_rv32i](https://github.com/vinayrayapati/rv32i/)*    
+  
+### Steps to perform functional simulation of RISCV 
+1. download the ```iiitb_rv32i.v``` and ```iiitb_rv32i_tb.v``` files from
+https://github.com/vinayrayapati/rv32i/
+3. Create a new directory with your name ```mkdir <your_name>```
+4. Copy the files ```iiitb_rv32i.v``` and ```iiitb_rv32i_tb.v``` to this directory
+  
+  
+5. To run and simulate the verilog code, enter the following command:  
+	```
+	$ iverilog -o iiitb_rv32i iiitb_rv32i.v iiitb_rv32i_tb.v
+	$ ./iiitb_rv32i
+	```
+6. To see the simulation waveform in GTKWave, enter the following command:
+	```
+	$ gtkwave iiitb_rv32i.vcd
+	```
+
+7. The GTKWave will be opened and following window will be appeared  
+
+ <p align="center">
+  <img width="500" src="/Task 4/GTKWave Window.png">
+</p>
+ 
+#### Every instruction in the provided verilog file is hard-coded, as seen in the picture below. Hard-coded indicates that each instruction has been hard-coded according to the designer's own pattern rather than adhering to the RISCV specifications bit pattern. As a result, the 32-bit instruction we produced in Task 3 will not correspond to the specified instruction.  
+  
+ <p align="center">
+  <img width="500" src="/Task 4/Instructions.png">
+</p>
+  
+#### Following are the differences between standard RISCV ISA and the Instruction Set given in the reference repository:  
+  
+|  **Operation**  |  **Standard RISCV ISA**  |  **Hardcoded ISA**  |  
+|  :----:  |  :----:  |  :----:  |  
+|  ADD R6, R2, R1  |  32'h00110333  |  32'h02208300  |  
+|  SUB R7, R1, R2  |  32'h402083b3  |  32'h02209380  |  
+|  AND R8, R1, R3  |  32'h0030f433  |  32'h0230a400  |  
+|  OR R9, R2, R5  |  32'h005164b3  |  32'h02513480  |  
+|  XOR R10, R1, R4  |  32'h0040c533  |  32'h0240c500  |  
+|  SLT R1, R2, R4  |  32'h0045a0b3  |  32'h02415580  |  
+|  ADDI R12, R4, 5  |  32'h004120b3  |  32'h00520600  |  
+|  BEQ R0, R0, 15  |  32'h00000f63  |  32'h00f00002  |  
+|  SW R3, R1, 2  |  32'h0030a123  |  32'h00209181  |  
+|  LW R13, R1, 2  |  32'h0020a683  |  32'h00208681  |  
+|  SRL R16, R14, R2  |  32'h0030a123  |  32'h00271803  |
+|  SLL R15, R1, R2  |  32'h002097b3  |  32'h00208783  |   
+  
+
+#### *Analysing the Output Waveform of various instructions that we have covered in TASK-2*  
+
+**```Instruction 1: ADD R6, R2, R1```**
+
+<p align="center">
+  <img width="500" src="/Task 4/ADD.png">
+</p>
+
+---
+
+**```Instruction 2: SUB R7, R1, R2```**
+
+<p align="center">
+  <img width="500" src="/Task 4/SUB.png">
+</p>
+
+---
+
+**```Instruction 3: AND R8, R1, R3```**
+
+<p align="center">
+  <img width="500" src="/Task 4/AND.png">
+</p>
+
+---
+
+**```Instruction 4: OR R9, R2, R5```**
+
+<p align="center">
+  <img width="500" src="/Task 4/OR.png">
+</p>
+
+---
+
+**```Instruction 5: XOR R10, R1, R4```**
+
+<p align="center">
+  <img width="500" src="/Task 4/XOR.png">
+</p>
+
+---
+
+**```Instruction 6: SLT R11, R2, R4```**
+
+<p align="center">
+  <img width="500" src="/Task 4/SLT.png">
+</p>
+
+---
+
+**```Instruction 7: ADDI R12, R4, 5```**
+
+<p align="center">
+  <img width="500" src="/Task 4/ADDI.png">
+</p>
+
+---
+
+**```Instruction 8: BEQ R0, R0, 15```**
+
+<p align="center">
+  <img width="500" src="/Task 4/BEQ.png">
+</p>
+
+---
+
+**```Instruction 9: SW R3, R1, 2```**
+
+<p align="center">
+  <img width="500" src="/Task 4/SW.png">
+</p>
+
+---
+
+**```Instruction 10: LW R13, R1, 2```**
+
+<p align="center">
+  <img width="500" src="/Task 4/LW.png">
+</p>
+
+</details>  
+
 ## License
 This project documentation is licensed under the MIT License.
 
