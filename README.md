@@ -652,5 +652,6 @@ https://github.com/vinayrayapati/rv32i/
 </details>  
 
 ## License
-This project documentation is licensed under the MIT License.
+
+This project is licensed under the [MIT License](LICENSE).
 
