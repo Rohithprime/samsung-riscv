@@ -1,5 +1,10 @@
 # Documentation for the Samsung RISC-V Workshop
 
+Name - Rohith DR
+College - Global Academy of technology
+
+ **Note:** This repository is the same as [Rohith-DR/VSD_mini_internship](https://github.com/Rohith-DR/VSD_mini_internship), as both are owned by me. I have used it here because I participated both individually and as part of a workshop conducted in my college.
+
 Welcome to the documentation for the Samsung Semiconductor RISC-V Workshop! Using the VSDSquadron Mini RISC-V development board, this session investigates the open-source RISC-V architecture. As a pioneer in technology, Samsung is dedicated to developing RISC-V technology and encouraging creativity via cooperation and education.
 
  <p align="center">
