@@ -1,7 +1,7 @@
 # Documentation for the Samsung RISC-V Workshop
 
-Name - Rohith DR
-College - Global Academy of technology
+**Name:** Rohith DR  
+**Institution:** Global Academy of Technology
 
  **Note:** This repository is the same as [Rohith-DR/VSD_mini_internship](https://github.com/Rohith-DR/VSD_mini_internship), as both are owned by me. I have used it here because I participated both individually and as part of a workshop conducted in my college.
 
